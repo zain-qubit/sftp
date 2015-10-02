@@ -1,4 +1,4 @@
-atmoz/sftp
+zaininfo/sftp
 ==========
 
 Easy to use SFTP ([SSH File Transfer Protocol](https://en.wikipedia.org/wiki/SSH_File_Transfer_Protocol)) server with [OpenSSH](https://en.wikipedia.org/wiki/OpenSSH).
@@ -23,7 +23,7 @@ Examples
 ```
 docker run \
     -v /host/share:/home/foo/share \
-    -p 2222:22 -d atmoz/sftp \
+    -p 2222:22 -d zaininfo/sftp \
     foo:123:1001
 ```
 
@@ -40,7 +40,7 @@ docker run \
     -v /host/share:/home/foo/share \
     -v /host/documents:/home/foo/documents \
     -v /host/http:/home/bar/http \
-    -p 2222:22 -d atmoz/sftp \
+    -p 2222:22 -d zaininfo/sftp \
     foo:123:1001 \
     bar:abc:1002
 ```
@@ -52,7 +52,7 @@ Add `:e` behind password to mark it as encrypted. Use single quotes.
 ```
 docker run \
     -v /host/share:/home/foo/share \
-    -p 2222:22 -d atmoz/sftp \
+    -p 2222:22 -d zaininfo/sftp \
     'foo:$1$0G2g0GSt$ewU0t6GXG15.0hWoOX8X9.:e:1001'
 ```
 
@@ -69,6 +69,6 @@ docker run \
     -v /host/id_rsa.pub:/home/foo/.ssh/keys/id_rsa.pub:ro \
     -v /host/id_other.pub:/home/foo/.ssh/keys/id_other.pub:ro \
     -v /host/share:/home/foo/share \
-    -p 2222:22 -d atmoz/sftp \
+    -p 2222:22 -d zaininfo/sftp \
     foo::1001
 ```

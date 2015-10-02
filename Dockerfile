@@ -1,5 +1,5 @@
 FROM debian:wheezy
-MAINTAINER Adrian Dvergsdal [atmoz.net]
+MAINTAINER Zain ul Abideen <zain@qubit.com>
 
 # Install OpenSSH
 RUN apt-get update && \
@@ -12,6 +12,8 @@ RUN mkdir -p /var/run/sshd
 # Copy configuration and entrypoint script
 COPY sshd_config /etc/ssh/sshd_config
 COPY entrypoint /
+
+COPY PUBLIC_KEY.pub /home/USER_NAME/.ssh/keys/PUBLIC_KEY.pub
 
 EXPOSE 22
 
